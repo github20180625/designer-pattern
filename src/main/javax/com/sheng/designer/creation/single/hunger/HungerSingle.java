@@ -11,6 +11,7 @@ public class HungerSingle {
 	private static final HungerSingle instance = new HungerSingle();
 
 	private HungerSingle() {
+
 	}
 
 	public static HungerSingle getInstance() {
