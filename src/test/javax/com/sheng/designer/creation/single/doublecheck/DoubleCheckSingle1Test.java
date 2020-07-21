@@ -1,30 +1,26 @@
-package javax.com.sheng.designer.creation.single.lazy;
+package javax.com.sheng.designer.creation.single.doublecheck;
 
-
-public class LazySingleTest {
+public class DoubleCheckSingle1Test {
 
 	public static void main(String[] args) {
 		unsafety();
 	}
 
-	// 顺序创建
 	public static void safety() {
-		LazySingle instance = LazySingle.getInstance();
+		DoubleCheckSingle1 instance = DoubleCheckSingle1.getInstance();
 
-		LazySingle instance1 = LazySingle.getInstance();
+		DoubleCheckSingle1 instance1 = DoubleCheckSingle1.getInstance();
 
 		System.out.println(instance == instance1);
 	}
 
-	// 开启多个线程执行代码
 	public static void unsafety() {
-
 		for (int i = 0; i < 100; i++) {
 			new Thread(() -> {
-				LazySingle instance = LazySingle.getInstance1();
+				DoubleCheckSingle1 instance = DoubleCheckSingle1.getInstance();
 				System.out.println(Thread.currentThread().getName() + ":" + instance);
 			}).start();
 		}
-
 	}
+
 }
