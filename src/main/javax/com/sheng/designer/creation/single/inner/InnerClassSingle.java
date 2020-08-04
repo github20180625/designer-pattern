@@ -37,15 +37,6 @@ public class InnerClassSingle {
 	}
 
 	public static void main(String[] args) {
-//		InnerClassSingle innerClassSingle = new InnerClassSingle();
-//		System.out.println(innerClassSingle);
-//		InnerClass innerClass = innerClassSingle.new InnerClass();
-//		innerClass.methodInFirstLevel(3);
-//		InnerClassSingle single = getInstance();
-//		System.out.println(single);
-//		InnerClassSingle innerSingle = InnerClass.instance;
-//		System.out.println(innerSingle);
-
 //		InnerClassSingle single = InnerClassSingle.getInstance();
 //		System.out.println(Thread.currentThread().getName() + "::" + single);
 
